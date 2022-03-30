@@ -74,6 +74,10 @@
         border-radius: 0 3px 3px 0;
         user-select: none;
       }
+      .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+      }
       /* Position the "next button" to the right */
       .next {
         right: 0;
@@ -119,10 +123,12 @@
       }
       /* Fading animation */
       .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+-webkit-animation-fill-mode: forwards; 
+animation-name: fade;
+animation-duration: 1.5s;
+animation-fill-mode: forwards; 
       }
       @-webkit-keyframes fade {
         from {
