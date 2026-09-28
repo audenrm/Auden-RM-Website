@@ -13,6 +13,16 @@
         <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
+        <style>
+            .research-intro { font-size: 1.05rem; color: #6c757d; }
+            .project-placeholder { min-height: 250px; width: 100%; background: #f2f4f5; border: 2px dashed #c7cdd1; border-radius: .5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #6c757d; padding: 2rem; text-align: center; }
+            .project-placeholder span { font-weight: 700; font-size: 1.05rem; }
+            .project-placeholder small { margin-top: .4rem; }
+            .project-placeholder-modal { min-height: 330px; margin-bottom: 2rem; }
+            .project-poster-thumb { width: 100%; height: 250px; object-fit: cover; object-position: top center; border-radius: .5rem; }
+            .poster-pdf { width: 100%; height: 72vh; min-height: 600px; border: 1px solid #dee2e6; border-radius: .35rem; }
+            @media (max-width: 767px) { .poster-pdf { height: 70vh; min-height: 450px; } }
+        </style>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -229,7 +239,7 @@ animation-fill-mode: forwards;
                 <!-- Masthead Subheading-->
                 <h2 class="pre-wrap masthead-subheading font-weight-bold mb-3">Geophysicist and Seismologist at Caltech</h2>
                 <h4 class="pre-wrap masthead-subheading font-weight-light mb-3">I am a PhD candidate in Geophysics at the Caltech Seismological Laboratory. My research uses dense seismic observations, distributed acoustic sensing (DAS), active-source experiments, numerical modeling, and geodetic measurements to study how the solid Earth and cryosphere deform across scales. I am especially interested in seismic imaging and wave propagation in complex environments, glacier and ice-sheet dynamics, earthquake and fault physics, and extracting physical constraints from large geophysical datasets. Across these problems, I combine field experiments with signal processing, array methods, imaging, and physics-based modeling to connect observations to the processes that produce them.</h4>
-                <h4 class="pre-wrap masthead-subheading font-weight-light mb-0">My current graduate research spans Antarctic seismology, high-resolution glacier imaging, rapid-response DAS, and earthquake-source physics. Read more about these projects below.</h4>
+                <h4 class="pre-wrap masthead-subheading font-weight-light mb-0">My current research spans cryoseismology, seismic imaging, distributed acoustic sensing, earthquake and fault physics, and large-scale geophysical field experiments. I am particularly interested in using dense observations and physics-based models to understand ice-sheet basal conditions, glacier dynamics, fault slip, and the structure of complex Earth systems.</h4>
             </div>
         </header>
         <section class="page-section research" id="research">
@@ -247,35 +257,42 @@ animation-fill-mode: forwards;
                 <!-- Portfolio Grid Items-->
                 <div class="text-center mb-5">
                     <h3 class="text-secondary mb-2">Graduate Research</h3>
-                    <p class="research-intro mb-0">Current projects at Caltech spanning cryoseismology, seismic imaging, dense sensing, and earthquake physics.</p>
+                    <p class="research-intro mb-0">Current projects at Caltech spanning Antarctic seismology, dense sensing, seismic imaging, and earthquake physics.</p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <h5 class="text-center mb-2">Union Glacier: 3-D Seismic Imaging of an Antarctic Ice Stream</h5>
+                        <h5 class="text-center mb-2">Union Glacier: 3-D Seismic Imaging and Glacier Dynamics</h5>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                            <div class="project-placeholder"><i class="fas fa-mountain fa-3x mb-3"></i><span>Add project image / poster</span><small>graduate_union_glacier.jpg</small></div>
+                            <div class="project-placeholder"><i class="fas fa-mountain fa-3x mb-3"></i><span>Union Glacier / GLASS</span><small>Add your project image here later</small></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <h5 class="text-center mb-2">South Pole DAS: Imaging the Antarctic Ice Sheet and Subglacial Environment</h5>
+                        <h5 class="text-center mb-2">South Pole DAS Thermometry and Reflection Seismology</h5>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                            <div class="project-placeholder"><i class="fas fa-snowflake fa-3x mb-3"></i><span>Add project image / poster</span><small>graduate_south_pole.jpg</small></div>
+                            <img class="img-fluid project-poster-thumb" src="AGU2023Poster.jpg" alt="South Pole DAS thermometry and reflection seismology poster"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <h5 class="text-center mb-2">South Pole Sedimentary Basin Thickness from Receiver Functions</h5>
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
+                            <img class="img-fluid project-poster-thumb" src="AGU2024__DRAFT1_.png" alt="South Pole sedimentary basin receiver function poster"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
                         <h5 class="text-center mb-2">Rapid-Response DAS Following the Eaton Fire</h5>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                            <div class="project-placeholder"><i class="fas fa-wave-square fa-3x mb-3"></i><span>Add project image / poster</span><small>graduate_eaton_das.jpg</small></div>
+                            <div class="project-placeholder"><i class="fas fa-wave-square fa-3x mb-3"></i><span>Rapid-Response DAS</span><small>Add your project image here later</small></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <h5 class="text-center mb-2">Scaling and Physics of Slow-Slip Events</h5>
+                        <h5 class="text-center mb-2">Scaling of Episodic Slow-Slip Events on Rate-and-State Faults</h5>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                            <div class="project-placeholder"><i class="fas fa-chart-line fa-3x mb-3"></i><span>Add project image / poster</span><small>graduate_slow_slip.jpg</small></div>
+                            <div class="project-placeholder"><i class="fas fa-chart-line fa-3x mb-3"></i><span>Slow-Slip Scaling</span><small>SCEC poster opens in project window</small></div>
                         </div>
                     </div>
                 </div>
@@ -405,10 +422,62 @@ animation-fill-mode: forwards;
             </div>
         </div>
         <!-- Graduate Research Modals -->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><h6 class="portfolio-modal-title text-secondary mb-0">Union Glacier: 3-D Seismic Imaging of an Antarctic Ice Stream</h6><div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div><div class="project-placeholder project-placeholder-modal"><i class="fas fa-mountain fa-4x mb-3"></i><span>Add project image or poster here</span><small>Suggested file: assets/img/portfolio/graduate_union_glacier.jpg</small></div><p class="mb-3">At Union Glacier, Antarctica, I lead seismic components of a dense geophysical experiment designed to image the ice column, basal environment, and structures controlling ice-stream motion. The deployment combines kilometers of distributed acoustic sensing with dense nodal seismometers, GNSS, radar, and active sources, creating a high-resolution view of a glacier across multiple complementary datasets.</p><p class="mb-4">My work focuses on seismic imaging and wave propagation in strongly three-dimensional glacier geometry, including PP and converted-wave reflections, out-of-plane structure, migration, and integration with radar and geodetic constraints. I also use numerical wave-propagation models to test how basal materials, water layers, and reflector geometry appear in the observations.</p><button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button></div></div></div></div></div></div>
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><h6 class="portfolio-modal-title text-secondary mb-0">South Pole DAS: Imaging the Antarctic Ice Sheet and Subglacial Environment</h6><div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div><div class="project-placeholder project-placeholder-modal"><i class="fas fa-snowflake fa-4x mb-3"></i><span>Add project image or poster here</span><small>Suggested file: assets/img/portfolio/graduate_south_pole.jpg</small></div><p class="mb-3">This project uses distributed acoustic sensing at the South Pole to turn fiber-optic cable into a dense seismic array for studying the Antarctic ice sheet. The exceptionally high spatial sampling of DAS allows us to resolve wavefields and structures that are difficult to observe with conventional sparse instrumentation.</p><p class="mb-4">My work uses these data to investigate both englacial and subglacial structure, combining array processing, seismic imaging, and waveform analysis to understand how seismic energy propagates through ice and what it reveals about the ice-bed system.</p><button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button></div></div></div></div></div></div>
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><h6 class="portfolio-modal-title text-secondary mb-0">Rapid-Response DAS Following the Eaton Fire</h6><div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div><div class="project-placeholder project-placeholder-modal"><i class="fas fa-wave-square fa-4x mb-3"></i><span>Add project image or poster here</span><small>Suggested file: assets/img/portfolio/graduate_eaton_das.jpg</small></div><p class="mb-3">Following the Eaton Fire, we rapidly deployed distributed acoustic sensing to observe post-fire landscape response with dense, continuous seismic measurements. The project demonstrates how existing fiber-optic infrastructure can be used as a rapid-response geophysical sensor after an environmental disturbance.</p><p class="mb-4">I work on processing and interpreting the large DAS dataset to identify and characterize signals associated with changing near-surface and hillslope processes. More broadly, the project explores how dense seismic sensing can contribute to natural-hazard monitoring when observations are needed quickly and at high spatial resolution.</p><button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button></div></div></div></div></div></div>
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><h6 class="portfolio-modal-title text-secondary mb-0">Scaling and Physics of Slow-Slip Events</h6><div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div><div class="project-placeholder project-placeholder-modal"><i class="fas fa-chart-line fa-4x mb-3"></i><span>Add project image or poster here</span><small>Suggested file: assets/img/portfolio/graduate_slow_slip.jpg</small></div><p class="mb-3">Slow-slip events occupy an important part of the spectrum of fault behavior between steady creep and ordinary earthquakes. I study how their duration, moment, spatial scale, and recurrence relate to one another and what those relationships imply about the mechanics controlling transient fault slip.</p><p class="mb-4">This work combines observations with frictional and physics-based models to test proposed scaling relationships and connect geodetically observed slow slip to broader questions in earthquake-source physics.</p><button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button></div></div></div></div></div></div>
+        <!-- Graduate Research Modals -->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-9">
+                <h6 class="portfolio-modal-title text-secondary mb-0">Union Glacier: 3-D Seismic Imaging and Glacier Dynamics</h6>
+                <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div>
+                <div class="project-placeholder project-placeholder-modal"><i class="fas fa-mountain fa-4x mb-3"></i><span>Add Union Glacier image or poster here</span></div>
+                <p class="mb-3">At Union Glacier, Antarctica, I lead seismic components of a dense geophysical experiment designed to image the ice column, basal environment, and structures controlling ice-stream motion. The experiment combines kilometers of distributed acoustic sensing with dense nodal seismometers, GNSS, radar, and active sources.</p>
+                <p class="mb-4">My work focuses on high-resolution seismic imaging and wave propagation in strongly three-dimensional glacier geometry, including reflected and converted phases, out-of-plane structure, migration, and integration with radar and geodetic constraints. I also use numerical wave-propagation models to test how basal materials, water layers, and reflector geometry appear in the observations.</p>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+            </div></div></div></div></div></div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-10">
+                <h6 class="portfolio-modal-title text-secondary mb-0">DAS Thermometry and Reflection Seismology at the South Pole</h6>
+                <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div>
+                <img class="img-fluid rounded mb-5" src="AGU2023Poster.jpg" alt="South Pole DAS thermometry and reflection seismology poster"/>
+                <p class="mb-3">At the South Pole, we converted existing fiber-optic infrastructure into a dense distributed acoustic sensing array for active-source and passive seismology. I use reflection amplitudes, converted phases, attenuation, and waveform modeling to investigate the thermal state of the ice sheet and the properties of the subglacial sedimentary basin.</p>
+                <p class="mb-4">This work links seismic observations to basal temperature, sediment properties, and ice-sheet dynamics, demonstrating how DAS can provide high-resolution constraints in an environment where conventional geophysical measurements are difficult to acquire.</p>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+            </div></div></div></div></div></div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-10">
+                <h6 class="portfolio-modal-title text-secondary mb-0">Constraints on South Pole Sedimentary Basin Thickness</h6>
+                <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div>
+                <img class="img-fluid rounded mb-5" src="AGU2024__DRAFT1_.png" alt="South Pole receiver function poster"/>
+                <p class="mb-3">I developed a modified receiver-function approach for the South Pole that avoids unstable deconvolution in glacial settings by forward modeling the radial component from the observed vertical component. The method uses broadband seismic observations to constrain the subglacial sedimentary basin beneath the ice sheet.</p>
+                <p class="mb-4">The results indicate an approximately 500–1500 m thick sedimentary basin across the array, with thickness increasing toward the South Pole. This helps reconcile previous geophysical estimates and provides constraints on the basal environment relevant to ice-sheet dynamics.</p>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+            </div></div></div></div></div></div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-9">
+                <h6 class="portfolio-modal-title text-secondary mb-0">Rapid-Response DAS Following the Eaton Fire</h6>
+                <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div>
+                <div class="project-placeholder project-placeholder-modal"><i class="fas fa-wave-square fa-4x mb-3"></i><span>Add Eaton Fire DAS image or poster here</span></div>
+                <p class="mb-3">Following the Eaton Fire, we rapidly deployed distributed acoustic sensing to observe post-fire landscape response with dense, continuous seismic measurements. The project tests how fiber-optic infrastructure can be used as a rapid-response geophysical sensor after a major environmental disturbance.</p>
+                <p class="mb-4">I work on processing and interpreting the DAS dataset to identify and characterize signals associated with changing near-surface and hillslope processes, with the broader goal of developing dense seismic sensing for rapid natural-hazard response.</p>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+            </div></div></div></div></div></div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document"><div class="modal-content"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button><div class="modal-body text-center"><div class="container"><div class="row justify-content-center"><div class="col-lg-10">
+                <h6 class="portfolio-modal-title text-secondary mb-0">Scaling of Episodic SSEs on Simulated Rate-and-State Faults</h6>
+                <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-chart-bar"></i></div><div class="divider-custom-line"></div></div>
+                <object data="Auden-scec-final-poster-NL%5B17458%5D.pdf" type="application/pdf" class="poster-pdf mb-4"><p><a href="Auden-scec-final-poster-NL%5B17458%5D.pdf">Open the SCEC poster PDF</a></p></object>
+                <p class="mb-3">I use Cascadia-like rate-and-state fault simulations to study the moment-duration scaling of episodic slow-slip events and how inferred scaling depends on both physical parameters and the way simulated event catalogs are constructed.</p>
+                <p class="mb-4">The work tests the effects of slip-rate thresholds, integration area, and effective normal stress. The simulations show that processing choices can substantially change inferred event size and scaling, while lower effective normal stress can also produce systematically different scaling. This provides a path toward using slow-slip observations to constrain fault-zone physics while accounting for observational and processing limitations.</p>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+            </div></div></div></div></div></div>
+        </div>
+
         <section class="page-section bg-primary text-white mb-0" id="teaching">
             <div class="container">
                 <!-- Teaching Section Heading-->
