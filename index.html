@@ -71,6 +71,14 @@
             .glass-frame-wrap { width:100%; overflow:hidden; border:1px solid #dee2e6; border-radius:.5rem; background:#fff; }
             .glass-frame { width:1400px; max-width:none; height:900px; min-height:0; border:0; border-radius:0; background:#fff; display:block; position:relative; left:50%; transform:translateX(-50%); }
             @media (max-width:900px) { .glass-frame { width:1200px; height:820px; } }
+
+            /* Preserve field-photo quality: fit the whole original instead of cropping/upscaling it. */
+            #fieldwork .fieldwork-stage { background:#111; }
+            #fieldwork .field-slide img { width:100%; height:520px; object-fit:contain !important; object-position:center; background:#111; }
+            #fieldwork .field-slide video { object-fit:contain !important; background:#111; }
+            /* Posters: fit the entire uploaded original in the modal; click opens native-resolution asset. */
+            .poster-fullres-wrap { width:100%; max-width:1200px; max-height:78vh; margin:0 auto 1.5rem; overflow:auto; background:#fff; display:flex; justify-content:center; }
+            .poster-fullres { width:auto !important; max-width:100% !important; height:auto !important; max-height:78vh; object-fit:contain; image-rendering:auto; cursor:zoom-in; }
 </style>
     </head>
     <body id="page-top">
