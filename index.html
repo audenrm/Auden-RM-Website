@@ -116,6 +116,11 @@
             }
 
             .teaching-card { border:1px solid #d9dee2; border-radius:.6rem; background:#fff; color:#212529; box-shadow:0 4px 14px rgba(0,0,0,.06); }
+            .seismic-wave-icon { width:42px; height:28px; display:block; overflow:visible; }
+            .seismic-wave-icon polyline { fill:none; stroke:currentColor; stroke-width:2.7; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+            .drive-material-link { display:inline-flex; align-items:center; gap:.55rem; margin-top:.45rem; padding:.55rem .9rem; border:2px solid #e87700; border-radius:999px; color:#e87700 !important; background:#fff; font-weight:700; text-decoration:none !important; transition:.18s ease; }
+            .drive-material-link:hover { color:#fff !important; background:#e87700; text-decoration:none !important; transform:translateY(-1px); }
+            .drive-material-link i, .drive-material-link svg { font-size:1.15rem; }
 
             .poster-pdf-viewer { width:100%; max-width:1400px; aspect-ratio:1.55 / 1; height:auto; min-height:0; margin:0 auto 1rem; background:#525659; border:1px solid #dee2e6; border-radius:.5rem; overflow:hidden; }
             .poster-pdf-native { width:100%; height:100%; border:0; display:block; }
@@ -342,7 +347,7 @@ animation-fill-mode: forwards;
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-globe-americas"></i></div>
+                    <div class="divider-custom-icon" aria-label="Seismic waveform"><svg class="seismic-wave-icon" viewBox="0 0 42 28" role="img" aria-hidden="true"><polyline points="1,14 8,14 11,10 14,18 17,4 20,24 23,8 26,17 29,12 32,14 41,14"></polyline></svg></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
@@ -756,14 +761,14 @@ animation-fill-mode: forwards;
                         <div class="d-flex flex-column align-items-center teaching-card h-100 p-4">
                             <h4 class="text-center mb-2">Differential Equations</h4>
                             <h6 class="text-center mb-3">Worksheets, presentations, and additional course materials</h6>
-                            <a class="btn btn-outline-light btn-social mx-1" href="https://drive.google.com/drive/folders/1LLi9Dg4IjBbdTtzWAU8a_o6c_A3YDe0X?usp=sharing" aria-label="Differential Equations teaching materials"><i class="fab fa-google-drive"></i></a>
+                            <a class="drive-material-link" href="https://drive.google.com/drive/folders/1LLi9Dg4IjBbdTtzWAU8a_o6c_A3YDe0X?usp=sharing" target="_blank" rel="noopener" aria-label="Open Differential Equations teaching materials in Google Drive"><i class="fab fa-google-drive"></i><span>View materials</span></a>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
                         <div class="d-flex flex-column align-items-center teaching-card h-100 p-4">
                             <h4 class="text-center mb-2">Physics: Waves, Oscillations, and Quantum</h4>
                             <h6 class="text-center mb-3">Tutoring presentations and course materials</h6>
-                            <a class="btn btn-outline-light btn-social mx-1" href="https://drive.google.com/drive/folders/16JrQd9TiT2PM3qGVvcRS1MuoZRVBWhQa?usp=sharing" aria-label="Physics teaching materials"><i class="fab fa-google-drive"></i></a>
+                            <a class="drive-material-link" href="https://drive.google.com/drive/folders/16JrQd9TiT2PM3qGVvcRS1MuoZRVBWhQa?usp=sharing" target="_blank" rel="noopener" aria-label="Open Physics teaching materials in Google Drive"><i class="fab fa-google-drive"></i><span>View materials</span></a>
                         </div>
                     </div>
                 </div>
