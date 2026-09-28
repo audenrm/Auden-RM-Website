@@ -48,7 +48,15 @@
             .field-thumb.active { border-color:#1abc9c; opacity:1; }
             .field-thumb img { width:100%; height:100%; object-fit:cover; }
             @media (max-width:767px) { .glass-frame{height:65vh;min-height:480px}.fieldwork-stage,.field-slide{min-height:360px}.field-slide img{height:360px} }
-                    .field-slide video { width:100%; height:520px; object-fit:contain; display:block; background:#000; }\n</style>
+                    .field-slide video { width:100%; height:520px; object-fit:contain; display:block; background:#000; }\n
+            /* Full-resolution fieldwork lightbox */
+            .field-slide img { cursor: zoom-in; }
+            .field-lightbox { position:fixed; inset:0; z-index:10000; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.94); padding:24px; }
+            .field-lightbox.open { display:flex; }
+            .field-lightbox img { max-width:96vw; max-height:92vh; width:auto; height:auto; object-fit:contain; box-shadow:0 8px 40px rgba(0,0,0,.45); }
+            .field-lightbox-close { position:fixed; top:18px; right:24px; border:0; background:rgba(255,255,255,.15); color:#fff; width:48px; height:48px; border-radius:50%; font-size:32px; line-height:1; cursor:pointer; z-index:10001; }
+            .field-lightbox-note { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); color:#fff; background:rgba(0,0,0,.55); padding:6px 12px; border-radius:16px; font-size:.9rem; }
+</style>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -255,7 +263,26 @@ animation-fill-mode: forwards;
         dots[slideIndex - 1].className += " active";
       }
     </script>
-  </body>
+  
+        // Full-resolution fieldwork image lightbox
+        (function () {
+            const box = document.getElementById('fieldLightbox');
+            const full = document.getElementById('fieldLightboxImage');
+            if (!box || !full) return;
+            const close = () => { box.classList.remove('open'); full.src = ''; document.body.style.overflow = ''; };
+            document.querySelectorAll('#fieldwork .field-slide img').forEach(img => {
+                img.addEventListener('click', function () {
+                    full.src = this.currentSrc || this.src;
+                    full.alt = this.alt || 'Field photograph';
+                    box.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            box.querySelector('.field-lightbox-close').addEventListener('click', close);
+            box.addEventListener('click', e => { if (e.target === box) close(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+        })();
+</body>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -568,6 +595,12 @@ animation-fill-mode: forwards;
                 </div>
             </div>
         </section>
+        <div class="field-lightbox" id="fieldLightbox" role="dialog" aria-modal="true" aria-label="Full-size field photograph">
+            <button class="field-lightbox-close" type="button" aria-label="Close full-size photograph">&times;</button>
+            <img id="fieldLightboxImage" src="" alt="">
+            <div class="field-lightbox-note">Click outside the image or press Esc to close</div>
+        </div>
+
         <section class="page-section bg-primary text-white mb-0" id="teaching">
             <div class="container">
                 <!-- Teaching Section Heading-->
