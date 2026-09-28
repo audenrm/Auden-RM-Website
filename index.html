@@ -257,18 +257,18 @@ animation-fill-mode: forwards;
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="GLASS_Antarctica_2025_401.jpg" style="width:100%">
+        <img src="GLASS_Antarctica_2025_401.jpg" style="width:100%" alt="GLASS fieldwork at Union Glacier, Antarctica">
         <div class="text">GLASS Fieldwork, Union Glacier, Antarctica</div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="GLASS_Antarctica_2025_401.jpg" style="width:100%">
+        <img src="GLASS_Antarctica_2025_91.jpg" style="width:100%" alt="GLASS fieldwork at Union Glacier, Antarctica">
         <div class="text">GLASS Fieldwork, Union Glacier, Antarctica</div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="GLASS_Antarctica_2025_401.jpg" style="width:100%">
-        <div class="text">GLASS Fieldwork, Union Glacier, Antarctica</div>
+        <img src="audefield.jpg" style="width:100%" alt="Fieldwork">
+        <div class="text">Geophysical Fieldwork</div>
       </div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -308,27 +308,6 @@ animation-fill-mode: forwards;
         dots[slideIndex - 1].className += " active";
       }
     </script>
-  
-        <script>
-// Full-resolution fieldwork image lightbox
-        (function () {
-            const box = document.getElementById('fieldLightbox');
-            const full = document.getElementById('fieldLightboxImage');
-            if (!box || !full) return;
-            const close = () => { box.classList.remove('open'); full.src = ''; document.body.style.overflow = ''; };
-            document.querySelectorAll('#fieldwork .field-slide img').forEach(img => {
-                img.addEventListener('click', function () {
-                    full.src = this.currentSrc || this.src;
-                    full.alt = this.alt || 'Field photograph';
-                    box.classList.add('open');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            box.querySelector('.field-lightbox-close').addEventListener('click', close);
-            box.addEventListener('click', e => { if (e.target === box) close(); });
-            document.addEventListener('keydown', e => { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
-        })();
-        </script>
 </body>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -938,5 +917,38 @@ Caltech · Pasadena, CA 91125</p>
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
+            <script>
+        // Full-resolution fieldwork image lightbox.
+        // This runs after the gallery/lightbox markup exists, so clicking any field photo expands it.
+        (function () {
+            var box = document.getElementById('fieldLightbox');
+            var full = document.getElementById('fieldLightboxImage');
+            if (!box || !full) return;
+
+            function closeFieldLightbox() {
+                box.classList.remove('open');
+                full.src = '';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('#fieldwork .field-slide img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    full.src = img.currentSrc || img.src;
+                    full.alt = img.alt || 'Field photograph';
+                    box.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            var closeButton = box.querySelector('.field-lightbox-close');
+            if (closeButton) closeButton.addEventListener('click', closeFieldLightbox);
+            box.addEventListener('click', function (event) {
+                if (event.target === box) closeFieldLightbox();
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && box.classList.contains('open')) closeFieldLightbox();
+            });
+        })();
+        </script>
+</body>
 </html>
