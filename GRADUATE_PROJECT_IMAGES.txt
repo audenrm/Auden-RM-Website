@@ -1,0 +1,14 @@
+Graduate project image placeholders
+===================================
+
+The updated site includes four new graduate-research cards and modals.
+The placeholders currently show the intended filenames:
+
+1. assets/img/portfolio/graduate_union_glacier.jpg
+2. assets/img/portfolio/graduate_south_pole.jpg
+3. assets/img/portfolio/graduate_eaton_das.jpg
+4. assets/img/portfolio/graduate_slow_slip.jpg
+
+When you have the images/posters, replace each <div class="project-placeholder"> in index.html with an <img> or <iframe>, following the existing older project examples.
+
+The existing undergraduate/earlier projects are preserved under an “Earlier Research” heading.
