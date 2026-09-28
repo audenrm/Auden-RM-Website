@@ -64,10 +64,13 @@
             .field-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:4; width:46px; height:46px; border:0; border-radius:50%; background:rgba(0,0,0,.48); color:#fff; font-size:1.5rem; }
             .field-arrow:hover { background:rgba(0,0,0,.72); }
             .field-arrow.prev-field { left:14px; } .field-arrow.next-field { right:14px; }
-            .field-thumbs { display:flex; gap:.75rem; overflow-x:auto; padding:.9rem .15rem .2rem; justify-content:center; }
+            .field-thumbs { display:flex; gap:.75rem; overflow-x:auto; padding:.9rem .15rem .45rem; justify-content:flex-start; scroll-behavior:smooth; scrollbar-width:thin; -webkit-overflow-scrolling:touch; }
             .field-thumb { width:92px; height:62px; flex:0 0 auto; border:3px solid transparent; border-radius:.4rem; overflow:hidden; background:#e9ecef; cursor:pointer; opacity:.7; }
             .field-thumb.active { border-color:#1abc9c; opacity:1; }
             .field-thumb img { width:100%; height:100%; object-fit:cover; }
+            .fieldwork-filters { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem; margin:0 auto 1.25rem; }
+            .fieldwork-filter { border:2px solid rgba(255,255,255,.72); border-radius:999px; padding:.42rem .9rem; background:transparent; color:#fff; font-weight:700; cursor:pointer; }
+            .fieldwork-filter:hover, .fieldwork-filter.active { background:#fff; color:#e87700; }
             @media (max-width:767px) { .glass-frame{height:65vh;min-height:480px}.fieldwork-stage,.field-slide{min-height:360px}.field-slide img{height:360px} }
                     .field-slide video { width:100%; height:520px; object-fit:contain; display:block; background:#000; }\n
             /* Full-resolution fieldwork lightbox */
@@ -628,55 +631,59 @@ animation-fill-mode: forwards;
             <div class="container">
                 <div class="text-center"><h2 class="page-section-heading d-inline-block text-white">FIELDWORK</h2></div>
                 <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-camera"></i></div><div class="divider-custom-line"></div></div>
-                <p class="text-center lead mb-5">Field campaigns, polar logistics, and geophysical deployments.</p>
+                <p class="text-center lead mb-4">Field campaigns, polar logistics, and geophysical deployments.</p>
+                <div class="fieldwork-filters" aria-label="Filter fieldwork gallery">
+                    <button class="fieldwork-filter active" type="button" data-field-filter="All">All</button>
+                    <button class="fieldwork-filter" type="button" data-field-filter="Antarctica">Antarctica</button>
+                    <button class="fieldwork-filter" type="button" data-field-filter="Iceland">Iceland</button>
+                    <button class="fieldwork-filter" type="button" data-field-filter="California">California</button>
+                </div>
                 <div class="fieldwork-shell">
                     <div class="fieldwork-stage" id="fieldworkStage">
-                        <div class="field-slide active"><img src="GLASS_Antarctica_2025_401.jpg" alt="GLASS fieldwork at Union Glacier, Antarctica" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>GLASS at Union Glacier</strong><span>Geophysical fieldwork at Union Glacier, Antarctica · 2025</span></div></div>
-                        <div class="field-slide"><img src="GLASS_Antarctica_2025_91.jpg" alt="GLASS field campaign at Union Glacier, Antarctica" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>Union Glacier field campaign</strong><span>GLASS fieldwork in Antarctica · 2025</span></div></div>
-                        <div class="field-slide"><img src="audenandsoyeon.jpg" alt="GLASS field team" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>GLASS field team</strong><span>Fieldwork at Union Glacier during the 2025 campaign</span></div></div>
-                        <div class="field-slide"><img src="audenPEG.jpg" alt="Polar fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Polar fieldwork</strong><span>Geophysical fieldwork in Antarctica</span></div></div>
-                        <div class="field-slide"><img src="crevasse1.jpg" alt="Crevasses at Union Glacier" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Crevasses at Union Glacier</strong><span>Glacial structure around the Union Glacier field area</span></div></div>
-                        <div class="field-slide"><img src="crevasse2.jpg" alt="Union Glacier ice" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Union Glacier ice</strong><span>Crevasse terrain near the GLASS field site</span></div></div>
-                        <div class="field-slide"><img src="hikeantarctica.jpg" alt="Union Glacier landscape" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Union Glacier landscape</strong><span>Travel through the Antarctic field area</span></div></div>
-                        <div class="field-slide"><img src="plame.jpg" alt="Travel to the field" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Travel to the field</strong><span>Aircraft operations supporting Antarctic fieldwork</span></div></div>
-                        <div class="field-slide"><img src="plane2.jpg" alt="Antarctic logistics" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic logistics</strong><span>Field transport for the Union Glacier campaign</span></div></div>
-                        <div class="field-slide"><img src="IMG_0044.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_0734.JPG" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1105.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1113.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1141.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1221.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1576.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_5679.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
-                        <div class="field-slide"><img src="IMG_5686.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
-                        <div class="field-slide"><img src="IMG_9786.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
-                        <div class="field-slide"><video controls playsinline preload="metadata"><source src="IMG_9796.MOV" type="video/quicktime">Your browser does not support embedded video.</video><div class="field-caption"><strong>Field video</strong><span>Video from the field campaign</span></div></div>
+                        <div class="field-slide active" data-field-category="Antarctica"><img src="GLASS_Antarctica_2025_91.jpg" alt="Union Glacier basecamp, winter 2025" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>Antarctica</strong><span>Union Glacier basecamp, winter 2025</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="audenandsoyeon.jpg" alt="Antarctic Logistics &amp; Expeditions preparation in Punta Arenas" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>Antarctica</strong><span>Antarctic Logistics &amp; Expeditions preparation in Punta Arenas</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="audenPEG.jpg" alt="Active-source seismic shots at Constellation Inlet" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Active-source seismic shots at Constellation Inlet</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="crevasse1.jpg" alt="Crevasse field showing Mode I cracks perpendicular to ice flow" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Crevasse field showing Mode I cracks perpendicular to ice flow</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="crevasse2.jpg" alt="Flying over ice shelves on the continental margins, with a propagating Mode I crack clearly visible" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Flying over ice shelves on the continental margins, with a propagating Mode I crack clearly visible</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="hikeantarctica.jpg" alt="Team photo at &quot;the Beach,&quot; Union Glacier, Antarctica" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Team photo at &quot;the Beach,&quot; Union Glacier, Antarctica</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="plame.jpg" alt="Team on the short ice-plane flight from Union Glacier to Constellation Inlet" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Team on the short ice-plane flight from Union Glacier to Constellation Inlet</span></div></div>
+                        <div class="field-slide" data-field-category="Antarctica"><img src="plane2.jpg" alt="Ice plane on skis" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctica</strong><span>Ice plane on skis</span></div></div>
+                        <div class="field-slide" data-field-category="California"><img src="IMG_0044.jpeg" alt="Office field trip to Joshua Tree" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>California</strong><span>Office field trip to Joshua Tree</span></div></div>
+                        <div class="field-slide" data-field-category="California"><img src="IMG_0734.JPG" alt="Field test for a geophysics course outside JPL" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>California</strong><span>Field test for a geophysics course outside JPL</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><img src="IMG_1105.jpeg" alt="Shane and Jiaxuan with the Snocat at Langjökull Glacier base, Iceland" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Iceland</strong><span>Shane and Jiaxuan with the Snocat at Langjökull Glacier base, Iceland</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><img src="IMG_1113.jpeg" alt="Standing at the base of Langjökull Glacier" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Iceland</strong><span>Standing at the base of Langjökull Glacier</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><img src="IMG_1141.jpeg" alt="Setting up camp and the DAS system" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Iceland</strong><span>Setting up camp and the DAS system</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><img src="IMG_1221.jpeg" alt="Deploying DAS fiber with the Snocat" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Iceland</strong><span>Deploying DAS fiber with the Snocat</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><img src="IMG_1576.jpeg" alt="Strokkur geyser field" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Iceland</strong><span>Strokkur geyser field</span></div></div>
+                        <div class="field-slide" data-field-category="California"><img src="IMG_5679.jpeg" alt="Debris-flow surface post-rain at Bailey Canyon" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>California</strong><span>Debris-flow surface post-rain at Bailey Canyon</span></div></div>
+                        <div class="field-slide" data-field-category="California"><img src="IMG_5686.jpeg" alt="Upstream debris-flow signature post-flow, showing large changes in topography along the canyon" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>California</strong><span>Upstream debris-flow signature post-flow, showing large changes in topography along the canyon</span></div></div>
+                        <div class="field-slide" data-field-category="California"><img src="IMG_9786.jpeg" alt="Hike to Eaton Canyon and Falls" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>California</strong><span>Hike to Eaton Canyon and Falls</span></div></div>
+                        <div class="field-slide" data-field-category="Iceland"><video controls playsinline preload="metadata"><source src="IMG_9796.MOV" type="video/quicktime">Your browser does not support embedded video.</video><div class="field-caption"><strong>Iceland</strong><span>Video showing cable deployment with a homemade system and Snocat</span></div></div>
                         <button class="field-arrow prev-field" type="button" aria-label="Previous field photo">&#10094;</button>
                         <button class="field-arrow next-field" type="button" aria-label="Next field photo">&#10095;</button>
                     </div>
                     <div class="field-thumbs">
-                        <button class="field-thumb active" data-field-slide="0" aria-label="GLASS at Union Glacier"><img src="GLASS_Antarctica_2025_401.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="1" aria-label="Union Glacier field campaign"><img src="GLASS_Antarctica_2025_91.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="2" aria-label="GLASS field team"><img src="audenandsoyeon.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="3" aria-label="Polar fieldwork"><img src="audenPEG.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="4" aria-label="Crevasses at Union Glacier"><img src="crevasse1.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="5" aria-label="Union Glacier ice"><img src="crevasse2.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="6" aria-label="Union Glacier landscape"><img src="hikeantarctica.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="7" aria-label="Travel to the field"><img src="plame.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="8" aria-label="Antarctic logistics"><img src="plane2.jpg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="9" aria-label="Antarctic fieldwork"><img src="IMG_0044.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="10" aria-label="Antarctic fieldwork"><img src="IMG_0734.JPG" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="11" aria-label="Antarctic fieldwork"><img src="IMG_1105.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="12" aria-label="Antarctic fieldwork"><img src="IMG_1113.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="13" aria-label="Antarctic fieldwork"><img src="IMG_1141.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="14" aria-label="Antarctic fieldwork"><img src="IMG_1221.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="15" aria-label="Antarctic fieldwork"><img src="IMG_1576.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="16" aria-label="Field campaign"><img src="IMG_5679.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="17" aria-label="Field campaign"><img src="IMG_5686.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="18" aria-label="Field campaign"><img src="IMG_9786.jpeg" alt="" loading="lazy"></button>
-                        <button class="field-thumb" data-field-slide="19" aria-label="Field video"><span style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;background:#18222b;color:white;"><i class="fas fa-play"></i></span></button>
+                        <button class="field-thumb active" data-field-slide="0" data-field-category="Antarctica" aria-label="Union Glacier basecamp, winter 2025"><img src="GLASS_Antarctica_2025_91.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="1" data-field-category="Antarctica" aria-label="Antarctic Logistics &amp; Expeditions preparation in Punta Arenas"><img src="audenandsoyeon.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="2" data-field-category="Antarctica" aria-label="Active-source seismic shots at Constellation Inlet"><img src="audenPEG.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="3" data-field-category="Antarctica" aria-label="Crevasse field showing Mode I cracks perpendicular to ice flow"><img src="crevasse1.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="4" data-field-category="Antarctica" aria-label="Flying over ice shelves on the continental margins, with a propagating Mode I crack clearly visible"><img src="crevasse2.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="5" data-field-category="Antarctica" aria-label="Team photo at &quot;the Beach,&quot; Union Glacier, Antarctica"><img src="hikeantarctica.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="6" data-field-category="Antarctica" aria-label="Team on the short ice-plane flight from Union Glacier to Constellation Inlet"><img src="plame.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="7" data-field-category="Antarctica" aria-label="Ice plane on skis"><img src="plane2.jpg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="8" data-field-category="California" aria-label="Office field trip to Joshua Tree"><img src="IMG_0044.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="9" data-field-category="California" aria-label="Field test for a geophysics course outside JPL"><img src="IMG_0734.JPG" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="10" data-field-category="Iceland" aria-label="Shane and Jiaxuan with the Snocat at Langjökull Glacier base, Iceland"><img src="IMG_1105.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="11" data-field-category="Iceland" aria-label="Standing at the base of Langjökull Glacier"><img src="IMG_1113.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="12" data-field-category="Iceland" aria-label="Setting up camp and the DAS system"><img src="IMG_1141.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="13" data-field-category="Iceland" aria-label="Deploying DAS fiber with the Snocat"><img src="IMG_1221.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="14" data-field-category="Iceland" aria-label="Strokkur geyser field"><img src="IMG_1576.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="15" data-field-category="California" aria-label="Debris-flow surface post-rain at Bailey Canyon"><img src="IMG_5679.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="16" data-field-category="California" aria-label="Upstream debris-flow signature post-flow, showing large changes in topography along the canyon"><img src="IMG_5686.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="17" data-field-category="California" aria-label="Hike to Eaton Canyon and Falls"><img src="IMG_9786.jpeg" alt="" loading="lazy"></button>
+                        <button class="field-thumb" data-field-slide="18" data-field-category="Iceland" aria-label="Video showing cable deployment with a homemade system and Snocat"><span style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;background:#18222b;color:white;"><i class="fas fa-play"></i></span></button>
                     </div>
-                    <p class="text-center small mt-3 mb-0">Use the arrows, thumbnails, keyboard arrow keys, or swipe to move through the field gallery.</p>
+                    <p class="text-center small mt-3 mb-0">Choose a location above, or use the arrows, thumbnails, keyboard arrow keys, or swipe to move through the field gallery.</p>
                 </div>
             </div>
         </section>
@@ -916,20 +923,74 @@ Caltech · Pasadena, CA 91125</p>
         (function () {
           var slides = Array.prototype.slice.call(document.querySelectorAll('.field-slide'));
           var thumbs = Array.prototype.slice.call(document.querySelectorAll('.field-thumb'));
-          var index = 0;
-          function showField(i) {
-            if (!slides.length) return;
-            index = (i + slides.length) % slides.length;
-            slides.forEach(function(el,j){ el.classList.toggle('active', j === index); });
-            thumbs.forEach(function(el,j){ el.classList.toggle('active', j === index); });
+          var filters = Array.prototype.slice.call(document.querySelectorAll('.fieldwork-filter'));
+          var index = 0, category = 'All';
+
+          function visibleIndices() {
+            var out = [];
+            slides.forEach(function(el,j){
+              if (category === 'All' || el.getAttribute('data-field-category') === category) out.push(j);
+            });
+            return out;
           }
+
+          function showField(i, centerThumb) {
+            if (!slides.length) return;
+            var visible = visibleIndices();
+            if (!visible.length) return;
+            if (visible.indexOf(i) === -1) i = visible[0];
+            index = i;
+            slides.forEach(function(el,j){
+              var allowed = category === 'All' || el.getAttribute('data-field-category') === category;
+              el.style.display = (allowed && j === index) ? 'flex' : 'none';
+              el.classList.toggle('active', allowed && j === index);
+            });
+            thumbs.forEach(function(el,j){
+              var allowed = category === 'All' || el.getAttribute('data-field-category') === category;
+              el.style.display = allowed ? '' : 'none';
+              el.classList.toggle('active', allowed && j === index);
+            });
+            if (centerThumb !== false && thumbs[index] && thumbs[index].style.display !== 'none') {
+              thumbs[index].scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+            }
+          }
+
+          function step(delta) {
+            var visible = visibleIndices();
+            var p = visible.indexOf(index);
+            if (p < 0) p = 0;
+            p = (p + delta + visible.length) % visible.length;
+            showField(visible[p], true);
+          }
+
           var prev = document.querySelector('.prev-field'), next = document.querySelector('.next-field');
-          if (prev) prev.addEventListener('click', function(){ showField(index-1); });
-          if (next) next.addEventListener('click', function(){ showField(index+1); });
-          thumbs.forEach(function(el){ el.addEventListener('click', function(){ showField(parseInt(el.getAttribute('data-field-slide'),10)); }); });
-          document.addEventListener('keydown', function(e){ if(e.key==='ArrowLeft') showField(index-1); if(e.key==='ArrowRight') showField(index+1); });
+          if (prev) prev.addEventListener('click', function(){ step(-1); });
+          if (next) next.addEventListener('click', function(){ step(1); });
+          thumbs.forEach(function(el){
+            el.addEventListener('click', function(){ showField(parseInt(el.getAttribute('data-field-slide'),10), true); });
+          });
+          filters.forEach(function(btn){
+            btn.addEventListener('click', function(){
+              category = btn.getAttribute('data-field-filter');
+              filters.forEach(function(b){ b.classList.toggle('active', b === btn); });
+              var strip = document.querySelector('.field-thumbs');
+              if (strip) strip.scrollLeft = 0;
+              var visible = visibleIndices();
+              showField(visible[0], false);
+            });
+          });
+          document.addEventListener('keydown', function(e){ if(e.key==='ArrowLeft') step(-1); if(e.key==='ArrowRight') step(1); });
           var stage=document.getElementById('fieldworkStage'), startX=null;
-          if(stage){ stage.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true}); stage.addEventListener('touchend',function(e){if(startX===null)return;var dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>45)showField(index+(dx<0?1:-1));startX=null;},{passive:true}); }
+          if(stage){
+            stage.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true});
+            stage.addEventListener('touchend',function(e){
+              if(startX===null)return;
+              var dx=e.changedTouches[0].clientX-startX;
+              if(Math.abs(dx)>45)step(dx<0?1:-1);
+              startX=null;
+            },{passive:true});
+          }
+          showField(0, false);
         })();
         </script>
         <!-- Bootstrap core JS-->
