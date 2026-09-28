@@ -115,6 +115,10 @@
             .poster-pdf-viewer { width:min(96vw,1500px); height:min(82vh,1050px); min-height:720px; margin:0 auto 1rem; background:#525659; border:1px solid #dee2e6; border-radius:.5rem; overflow:hidden; }
             .poster-pdf-native { width:100%; height:100%; border:0; display:block; }
             @media (max-width:767px) { .poster-pdf-viewer { height:72vh; min-height:500px; } }
+
+            .coursework-card { border:1px solid rgba(255,255,255,.4); border-radius:.65rem; background:rgba(255,255,255,.07); }
+            .coursework-card h6 { margin-bottom:.75rem; font-weight:500; }
+            .coursework-rule { width:48px; height:2px; margin:.8rem auto 1.15rem; background:rgba(255,255,255,.8); }
 </style>
     </head>
     <body id="page-top">
@@ -781,61 +785,76 @@ animation-fill-mode: forwards;
         </section>
         <section class="page-section bg-primary text-white" id="coursework">
             <div class="container">
-                <!-- Coursework Section Heading-->
                 <div class="text-center">
                     <h2 class="page-section-heading text-white d-inline-block mb-0">COURSEWORK</h2>
                 </div>
-                <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-book"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Contact Section Content-->
+
+                <div class="text-center mb-4">
+                    <h3 class="text-white">Graduate Coursework — Caltech</h3>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-4 mb-4">
+                        <div class="coursework-card h-100 p-4 text-center">
+                            <h5>Seismology &amp; Geophysics</h5>
+                            <div class="coursework-rule"></div>
+                            <h6>Seismology</h6>
+                            <h6>Applied Geophysics Seminar</h6>
+                            <h6>Applied Geophysics Field Course</h6>
+                            <h6>Tectonic Geodesy</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="coursework-card h-100 p-4 text-center">
+                            <h5>Geodynamics &amp; Solid Earth</h5>
+                            <div class="coursework-rule"></div>
+                            <h6>Plate Tectonics</h6>
+                            <h6>Geodynamics</h6>
+                            <h6>Mechanics of Rocks</h6>
+                            <h6>Fracture and Frictional Faulting</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="coursework-card h-100 p-4 text-center">
+                            <h5>Earth &amp; Continuum Sciences</h5>
+                            <div class="coursework-rule"></div>
+                            <h6>Continuum Mechanics of Fluids and Solids</h6>
+                            <h6>Earth's Oceans</h6>
+                            <h6>Introduction to Geology and Geochemistry</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-university"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="text-center mb-4">
+                    <h3 class="text-white">Selected Undergraduate Coursework — Cornell</h3>
+                    <p class="mb-0">Selected courses most directly relevant to my current geophysics research.</p>
+                </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <h5 class="text-center mb-2">Geosciences</h5>
-                            <div class="divider-custom divider-light">
-                                <div class="divider-custom-line"></div>
-                            </div>
-                            <h6 class="text-center mb-2">Exploration and Global Geophysics</h6>
-                            <h6 class="text-center mb-2">Geochemistry</h6>
-                            <h6 class="text-center mb-2">Earth Materials</h6>
-                            <h6 class="text-center mb-2">Fundamentals of Minerals and Energy</h6>
-                            <h6 class="text-center mb-2">Quantitative Analysis</h6>
-                            <h6 class="text-center mb-2">Inverse Methods</h6>
-                            <h6 class="text-center mb-2">Volcanology</h6>
-                            <h6 class="text-center mb-2">Earthquake Record Reading</h6>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="coursework-card h-100 p-4 text-center">
+                            <h5>Geophysics</h5>
+                            <div class="coursework-rule"></div>
+                            <h6>Exploration and Global Geophysics</h6>
+                            <h6>Inverse Methods</h6>
+                            <h6>Earthquake Record Reading</h6>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <h5 class="text-center mb-2">Engineering</h5>
-                            <div class="divider-custom divider-light">
-                                <div class="divider-custom-line"></div>
-                            </div>
-                            <h6 class="text-center mb-2">Fluid Mechanics</h6>
-                            <h6 class="text-center mb-2">Statics of Solids</h6>
-                            <h6 class="text-center mb-2">Thermodynamics</h6>
-                            <h6 class="text-center mb-2">Nanoscience and Nanotechnology</h6>
-                            <h6 class="text-center mb-2">Nuclear Science and Engineering</h6>
-                            <h6 class="text-center mb-2">General Chemistry</h6>
-                            <h6 class="text-center mb-2">Physics (Mechanics, E&M, Waves)</h6>
-                            <h6 class="text-center mb-2">Math (Multi Calc, Diff Eq, Lin Alg)</h6>       
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <h5 class="text-center mb-2">Miscellaneous</h5>
-                            <div class="divider-custom divider-light">
-                                <div class="divider-custom-line"></div>
-                            </div>
-                            <h6 class="text-center mb-2">Climate Dynamics</h6>
-                            <h6 class="text-center mb-2">Atmospheric Dynamics</h6>
-                            <h6 class="text-center mb-2">Narrative Writing</h6>
-                            <h6 class="text-center mb-2">Poetry Writing</h6>
-                            <h6 class="text-center mb-2">Cognitive Science</h6>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="coursework-card h-100 p-4 text-center">
+                            <h5>Supporting Earth Science</h5>
+                            <div class="coursework-rule"></div>
+                            <h6>Volcanology</h6>
+                            <h6>Climate Dynamics</h6>
+                            <h6>Atmospheric Dynamics</h6>
                         </div>
                     </div>
                 </div>
