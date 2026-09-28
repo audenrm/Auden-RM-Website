@@ -52,7 +52,7 @@
             /* Full-resolution fieldwork lightbox */
             .field-slide img { cursor: zoom-in; }
             .field-lightbox { position:fixed; inset:0; z-index:10000; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.94); padding:24px; }
-            .field-lightbox.open { display:flex; }
+            .field-lightbox.open { display:flex !important; }
             .field-lightbox img { max-width:96vw; max-height:92vh; width:auto; height:auto; object-fit:contain; box-shadow:0 8px 40px rgba(0,0,0,.45); }
             .field-lightbox-close { position:fixed; top:18px; right:24px; border:0; background:rgba(255,255,255,.15); color:#fff; width:48px; height:48px; border-radius:50%; font-size:32px; line-height:1; cursor:pointer; z-index:10001; }
             .field-lightbox-note { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); color:#fff; background:rgba(0,0,0,.55); padding:6px 12px; border-radius:16px; font-size:.9rem; }
@@ -606,25 +606,25 @@ animation-fill-mode: forwards;
                 <p class="text-center lead mb-5">Field campaigns, polar logistics, and geophysical deployments.</p>
                 <div class="fieldwork-shell">
                     <div class="fieldwork-stage" id="fieldworkStage">
-                        <div class="field-slide active"><img src="GLASS_Antarctica_2025_401.jpg" alt="GLASS fieldwork at Union Glacier, Antarctica" loading="eager"><div class="field-caption"><strong>GLASS at Union Glacier</strong><span>Geophysical fieldwork at Union Glacier, Antarctica · 2025</span></div></div>
-                        <div class="field-slide"><img src="GLASS_Antarctica_2025_91.jpg" alt="GLASS field campaign at Union Glacier, Antarctica" loading="eager"><div class="field-caption"><strong>Union Glacier field campaign</strong><span>GLASS fieldwork in Antarctica · 2025</span></div></div>
-                        <div class="field-slide"><img src="audenandsoyeon.jpg" alt="GLASS field team" loading="lazy"><div class="field-caption"><strong>GLASS field team</strong><span>Fieldwork at Union Glacier during the 2025 campaign</span></div></div>
-                        <div class="field-slide"><img src="audenPEG.jpg" alt="Polar fieldwork" loading="lazy"><div class="field-caption"><strong>Polar fieldwork</strong><span>Geophysical fieldwork in Antarctica</span></div></div>
-                        <div class="field-slide"><img src="crevasse1.jpg" alt="Crevasses at Union Glacier" loading="lazy"><div class="field-caption"><strong>Crevasses at Union Glacier</strong><span>Glacial structure around the Union Glacier field area</span></div></div>
-                        <div class="field-slide"><img src="crevasse2.jpg" alt="Union Glacier ice" loading="lazy"><div class="field-caption"><strong>Union Glacier ice</strong><span>Crevasse terrain near the GLASS field site</span></div></div>
-                        <div class="field-slide"><img src="hikeantarctica.jpg" alt="Union Glacier landscape" loading="lazy"><div class="field-caption"><strong>Union Glacier landscape</strong><span>Travel through the Antarctic field area</span></div></div>
-                        <div class="field-slide"><img src="plame.jpg" alt="Travel to the field" loading="lazy"><div class="field-caption"><strong>Travel to the field</strong><span>Aircraft operations supporting Antarctic fieldwork</span></div></div>
-                        <div class="field-slide"><img src="plane2.jpg" alt="Antarctic logistics" loading="lazy"><div class="field-caption"><strong>Antarctic logistics</strong><span>Field transport for the Union Glacier campaign</span></div></div>
-                        <div class="field-slide"><img src="IMG_0044.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_0734.JPG" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1105.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1113.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1141.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1221.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_1576.jpeg" alt="Antarctic fieldwork" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
-                        <div class="field-slide"><img src="IMG_5679.jpeg" alt="Field campaign" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
-                        <div class="field-slide"><img src="IMG_5686.jpeg" alt="Field campaign" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
-                        <div class="field-slide"><img src="IMG_9786.jpeg" alt="Field campaign" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
+                        <div class="field-slide active"><img src="GLASS_Antarctica_2025_401.jpg" alt="GLASS fieldwork at Union Glacier, Antarctica" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>GLASS at Union Glacier</strong><span>Geophysical fieldwork at Union Glacier, Antarctica · 2025</span></div></div>
+                        <div class="field-slide"><img src="GLASS_Antarctica_2025_91.jpg" alt="GLASS field campaign at Union Glacier, Antarctica" title="Click to view full-size image" loading="eager"><div class="field-caption"><strong>Union Glacier field campaign</strong><span>GLASS fieldwork in Antarctica · 2025</span></div></div>
+                        <div class="field-slide"><img src="audenandsoyeon.jpg" alt="GLASS field team" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>GLASS field team</strong><span>Fieldwork at Union Glacier during the 2025 campaign</span></div></div>
+                        <div class="field-slide"><img src="audenPEG.jpg" alt="Polar fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Polar fieldwork</strong><span>Geophysical fieldwork in Antarctica</span></div></div>
+                        <div class="field-slide"><img src="crevasse1.jpg" alt="Crevasses at Union Glacier" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Crevasses at Union Glacier</strong><span>Glacial structure around the Union Glacier field area</span></div></div>
+                        <div class="field-slide"><img src="crevasse2.jpg" alt="Union Glacier ice" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Union Glacier ice</strong><span>Crevasse terrain near the GLASS field site</span></div></div>
+                        <div class="field-slide"><img src="hikeantarctica.jpg" alt="Union Glacier landscape" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Union Glacier landscape</strong><span>Travel through the Antarctic field area</span></div></div>
+                        <div class="field-slide"><img src="plame.jpg" alt="Travel to the field" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Travel to the field</strong><span>Aircraft operations supporting Antarctic fieldwork</span></div></div>
+                        <div class="field-slide"><img src="plane2.jpg" alt="Antarctic logistics" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic logistics</strong><span>Field transport for the Union Glacier campaign</span></div></div>
+                        <div class="field-slide"><img src="IMG_0044.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_0734.JPG" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_1105.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_1113.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_1141.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_1221.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_1576.jpeg" alt="Antarctic fieldwork" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Antarctic fieldwork</strong><span>Scenes from the Union Glacier field campaign · 2025</span></div></div>
+                        <div class="field-slide"><img src="IMG_5679.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
+                        <div class="field-slide"><img src="IMG_5686.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
+                        <div class="field-slide"><img src="IMG_9786.jpeg" alt="Field campaign" title="Click to view full-size image" loading="lazy"><div class="field-caption"><strong>Field campaign</strong><span>Geophysical fieldwork and deployment</span></div></div>
                         <div class="field-slide"><video controls playsinline preload="metadata"><source src="IMG_9796.MOV" type="video/quicktime">Your browser does not support embedded video.</video><div class="field-caption"><strong>Field video</strong><span>Video from the field campaign</span></div></div>
                         <button class="field-arrow prev-field" type="button" aria-label="Previous field photo">&#10094;</button>
                         <button class="field-arrow next-field" type="button" aria-label="Next field photo">&#10095;</button>
@@ -919,7 +919,6 @@ Caltech · Pasadena, CA 91125</p>
         <script src="js/scripts.js"></script>
             <script>
         // Full-resolution fieldwork image lightbox.
-        // This runs after the gallery/lightbox markup exists, so clicking any field photo expands it.
         (function () {
             var box = document.getElementById('fieldLightbox');
             var full = document.getElementById('fieldLightboxImage');
@@ -927,26 +926,38 @@ Caltech · Pasadena, CA 91125</p>
 
             function closeFieldLightbox() {
                 box.classList.remove('open');
-                full.src = '';
+                box.style.display = 'none';
+                full.removeAttribute('src');
                 document.body.style.overflow = '';
             }
 
-            document.querySelectorAll('#fieldwork .field-slide img').forEach(function (img) {
-                img.addEventListener('click', function () {
-                    full.src = img.currentSrc || img.src;
-                    full.alt = img.alt || 'Field photograph';
-                    box.classList.add('open');
-                    document.body.style.overflow = 'hidden';
-                });
+            document.addEventListener('click', function (event) {
+                var img = event.target.closest('#fieldwork .field-slide img');
+                if (!img) return;
+                event.preventDefault();
+                event.stopPropagation();
+                full.src = img.currentSrc || img.src;
+                full.alt = img.alt || 'Field photograph';
+                box.classList.add('open');
+                box.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
             });
 
             var closeButton = box.querySelector('.field-lightbox-close');
-            if (closeButton) closeButton.addEventListener('click', closeFieldLightbox);
+            if (closeButton) {
+                closeButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    closeFieldLightbox();
+                });
+            }
             box.addEventListener('click', function (event) {
                 if (event.target === box) closeFieldLightbox();
             });
             document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && box.classList.contains('open')) closeFieldLightbox();
+                if (event.key === 'Escape' && (box.classList.contains('open') || box.style.display === 'flex')) {
+                    closeFieldLightbox();
+                }
             });
         })();
         </script>
