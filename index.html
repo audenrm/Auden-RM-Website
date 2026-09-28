@@ -79,6 +79,36 @@
             /* Posters: fit the entire uploaded original in the modal; click opens native-resolution asset. */
             .poster-fullres-wrap { width:100%; max-width:1200px; max-height:78vh; margin:0 auto 1.5rem; overflow:auto; background:#fff; display:flex; justify-content:center; }
             .poster-fullres { width:auto !important; max-width:100% !important; height:auto !important; max-height:78vh; object-fit:contain; image-rendering:auto; cursor:zoom-in; }
+
+            /* Poster viewer: render the uploaded asset at a readable/native-scale width.
+               The modal becomes a viewport; no browser stretch-to-fit blur. */
+            .poster-fullres-wrap {
+                width:min(94vw,1400px) !important;
+                height:min(76vh,950px);
+                max-height:none !important;
+                margin:0 auto 1.5rem !important;
+                overflow:auto !important;
+                background:#e9ecef !important;
+                border:1px solid #dee2e6;
+                border-radius:.5rem;
+                text-align:center;
+            }
+            .poster-fullres {
+                display:block !important;
+                width:auto !important;
+                min-width:1200px;
+                max-width:none !important;
+                height:auto !important;
+                max-height:none !important;
+                margin:0 auto;
+                object-fit:unset !important;
+                image-rendering:auto;
+                cursor:zoom-in;
+            }
+            @media (max-width: 900px) {
+                .poster-fullres { min-width:900px; }
+                .poster-fullres-wrap { height:72vh; }
+            }
 </style>
     </head>
     <body id="page-top">
