@@ -129,6 +129,19 @@
             .coursework-card { border:1px solid #d9dee2; border-radius:.65rem; background:#fff; color:#212529; box-shadow:0 4px 14px rgba(0,0,0,.06); }
             .coursework-card h6 { margin-bottom:.75rem; font-weight:500; }
             .coursework-rule { width:48px; height:2px; margin:.8rem auto 1.15rem; background:#e87700; }
+
+            .masthead-intro-grid { width:100%; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr); gap:3rem; align-items:center; margin-top:1.25rem; }
+            .masthead-intro-media { min-width:0; }
+            .masthead-intro-copy { text-align:left; max-width:620px; }
+            .masthead-intro-copy .divider-custom { justify-content:flex-start; margin:0 0 1.25rem; }
+            .masthead-intro-copy .divider-custom .divider-custom-line { max-width:5.5rem; }
+            .masthead-intro-copy .masthead-subheading { line-height:1.42; }
+            .masthead-intro-copy .masthead-bio { font-size:1.18rem; }
+            @media (max-width:991.98px) {
+              .masthead-intro-grid { grid-template-columns:1fr; gap:1.6rem; }
+              .masthead-intro-copy { text-align:center; max-width:900px; margin:0 auto; }
+              .masthead-intro-copy .divider-custom { justify-content:center; }
+            }
 </style>
     </head>
     <body id="page-top">
@@ -155,13 +168,9 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0 mt-3">Auden Reid-McLaughlin</h1>
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-globe-americas"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Icon Divider-->
+                <h1 class="sr-only">Auden Reid-McLaughlin</h1>
+                <div class="masthead-intro-grid">
+                    <div class="masthead-intro-media">
                 <!-- Masthead Avatar Image-->
                 <head>
     <title>Slideshow Images</title>
@@ -314,6 +323,8 @@ animation-fill-mode: forwards;
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+                    </div>
+                    <div class="masthead-intro-copy">
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
@@ -352,8 +363,10 @@ animation-fill-mode: forwards;
                 </div>
                 <!-- Masthead Subheading-->
                 <h2 class="pre-wrap masthead-subheading font-weight-bold mb-3">Geophysicist and Seismologist at Caltech</h2>
-                <h4 class="pre-wrap masthead-subheading font-weight-light mb-3">I am a PhD candidate in Geophysics at the Caltech Seismological Laboratory. My research uses dense seismic observations, distributed acoustic sensing (DAS), active-source experiments, numerical modeling, and geodetic measurements to study how the solid Earth and cryosphere deform across scales. I am especially interested in seismic imaging and wave propagation in complex environments, glacier and ice-sheet dynamics, earthquake and fault physics, and extracting physical constraints from large geophysical datasets. Across these problems, I combine field experiments with signal processing, array methods, imaging, and physics-based modeling to connect observations to the processes that produce them.</h4>
-                <h4 class="pre-wrap masthead-subheading font-weight-light mb-0">My current research spans cryoseismology, seismic imaging, distributed acoustic sensing, earthquake and fault physics, and large-scale geophysical field experiments. I am particularly interested in using dense observations and physics-based models to understand ice-sheet basal conditions, glacier dynamics, fault slip, and the structure of complex Earth systems.</h4>
+                <h4 class="pre-wrap masthead-subheading masthead-bio font-weight-light mb-3">I am a PhD candidate in Geophysics at the Caltech Seismological Laboratory. My research uses dense seismic observations, distributed acoustic sensing (DAS), active-source experiments, numerical modeling, and geodetic measurements to study how the solid Earth and cryosphere deform across scales. I am especially interested in seismic imaging and wave propagation in complex environments, glacier and ice-sheet dynamics, earthquake and fault physics, and extracting physical constraints from large geophysical datasets.</h4>
+                <h4 class="pre-wrap masthead-subheading masthead-bio font-weight-light mb-0">Across these problems, I combine field experiments with signal processing, array methods, imaging, and physics-based modeling to connect observations to the processes that produce them.</h4>
+                    </div>
+                </div>
             </div>
         </header>
         <section class="page-section research" id="research">
