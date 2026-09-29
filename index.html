@@ -130,16 +130,20 @@
             .coursework-card h6 { margin-bottom:.75rem; font-weight:500; }
             .coursework-rule { width:48px; height:2px; margin:.8rem auto 1.15rem; background:#e87700; }
 
-            .masthead-intro-grid { width:100%; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr); gap:3rem; align-items:center; margin-top:1.25rem; }
-            .masthead-intro-media { min-width:0; }
-            .masthead-intro-copy { text-align:left; max-width:620px; }
+            .masthead .container { max-width:1320px; }
+            .masthead-intro-grid { width:100%; display:flex; gap:3rem; align-items:center; justify-content:center; margin-top:1.25rem; }
+            .masthead-intro-media { flex:0 1 720px; min-width:0; max-width:720px; }
+            .masthead-intro-copy { flex:1 1 430px; min-width:0; max-width:520px; text-align:left; }
+            .masthead-intro-media .slideshow-container { width:100%; max-width:720px; margin:0 auto; }
+            .masthead-intro-media .slideshow-container .mySlides img { width:100%; height:auto; max-height:610px; object-fit:contain; }
             .masthead-intro-copy .divider-custom { justify-content:flex-start; margin:0 0 1.25rem; }
             .masthead-intro-copy .divider-custom .divider-custom-line { max-width:5.5rem; }
-            .masthead-intro-copy .masthead-subheading { line-height:1.42; }
-            .masthead-intro-copy .masthead-bio { font-size:1.18rem; }
+            .masthead-intro-copy .masthead-subheading { line-height:1.42; white-space:normal; }
+            .masthead-intro-copy .masthead-bio { font-size:1.08rem; }
             @media (max-width:991.98px) {
-              .masthead-intro-grid { grid-template-columns:1fr; gap:1.6rem; }
-              .masthead-intro-copy { text-align:center; max-width:900px; margin:0 auto; }
+              .masthead-intro-grid { display:block; margin-top:.5rem; }
+              .masthead-intro-media { max-width:760px; margin:0 auto 1.75rem; }
+              .masthead-intro-copy { text-align:center; max-width:760px; margin:0 auto; }
               .masthead-intro-copy .divider-custom { justify-content:center; }
             }
 </style>
