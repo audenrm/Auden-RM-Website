@@ -122,7 +122,10 @@
 
             .teaching-card { border:1px solid #d9dee2; border-radius:.6rem; background:#fff; color:#212529; box-shadow:0 4px 14px rgba(0,0,0,.06); }
             .seismic-wave-icon { width:42px; height:28px; display:block; overflow:visible; }
-            .seismic-wave-icon polyline { fill:none; stroke:currentColor; stroke-width:2.7; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+            .seismic-wave-icon polyline { fill:none; stroke:currentColor; stroke-width:2.7; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; stroke-dasharray:100; stroke-dashoffset:100; animation:drawSeismicWave 1.15s ease-out .2s forwards; }
+            @keyframes drawSeismicWave { to { stroke-dashoffset:0; } }
+            @media (prefers-reduced-motion:reduce) { .seismic-wave-icon polyline { animation:none; stroke-dashoffset:0; } }
+            .project-category { display:block; margin-bottom:.32rem; color:#e87700; font-size:.72rem; font-weight:800; letter-spacing:.105em; line-height:1.15; text-transform:uppercase; }
             .drive-material-link { display:inline-flex; align-items:center; gap:.55rem; margin-top:.45rem; padding:.55rem .9rem; border:2px solid #e87700; border-radius:999px; color:#e87700 !important; background:#fff; font-weight:700; text-decoration:none !important; transition:.18s ease; }
             .drive-material-link:hover { color:#fff !important; background:#e87700; text-decoration:none !important; transform:translateY(-1px); }
             .drive-material-link i, .drive-material-link svg { font-size:1.15rem; }
@@ -393,7 +396,7 @@ animation-fill-mode: forwards;
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4 mb-5 graduate-project-card">
                         <div class="project-heading text-center">
-                            <h5>Union Glacier: 3-D Seismic Imaging and Glacier Dynamics</h5>
+                            <span class="project-category">Cryoseismology · Seismic Imaging</span>\n                            <h5>Union Glacier: 3-D Seismic Imaging and Glacier Dynamics</h5>
                             <div class="project-insignia" aria-hidden="true"><i class="fas fa-mountain"></i></div>
                         </div>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
@@ -403,7 +406,7 @@ animation-fill-mode: forwards;
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5 graduate-project-card">
                         <div class="project-heading text-center">
-                            <h5>South Pole DAS Thermometry and Reflection Seismology</h5>
+                            <span class="project-category">Cryoseismology · Distributed Sensing</span>\n                            <h5>South Pole DAS Thermometry and Reflection Seismology</h5>
                             <div class="project-insignia" aria-hidden="true"><i class="fas fa-snowflake"></i></div>
                         </div>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
@@ -413,7 +416,7 @@ animation-fill-mode: forwards;
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5 graduate-project-card">
                         <div class="project-heading text-center">
-                            <h5>South Pole Sedimentary Basin Thickness from Receiver Functions</h5>
+                            <span class="project-category">Seismic Imaging · Earth Structure</span>\n                            <h5>South Pole Sedimentary Basin Thickness from Receiver Functions</h5>
                             <div class="project-insignia" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
                         </div>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
@@ -423,7 +426,7 @@ animation-fill-mode: forwards;
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5 graduate-project-card">
                         <div class="project-heading text-center">
-                            <h5>Rapid-Response DAS for Post-Fire Debris Flows</h5>
+                            <span class="project-category">Environmental Seismology · DAS</span>\n                            <h5>Rapid-Response DAS for Post-Fire Debris Flows</h5>
                             <div class="project-insignia" aria-hidden="true"><i class="fas fa-wave-square"></i></div>
                         </div>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
@@ -433,7 +436,7 @@ animation-fill-mode: forwards;
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5 graduate-project-card">
                         <div class="project-heading text-center">
-                            <h5>Slow-Slip Scaling and Rate-and-State Fault Physics</h5>
+                            <span class="project-category">Earthquake Physics · Fault Mechanics</span>\n                            <h5>Slow-Slip Scaling and Rate-and-State Fault Physics</h5>
                             <div class="project-insignia" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
                         </div>
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
