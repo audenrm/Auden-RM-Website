@@ -17,6 +17,9 @@
         <link rel="stylesheet" href="css/body.css">
         <style>
             .research-intro { font-size: 1.05rem; color: #6c757d; }
+            #mainNav .nav-link { display:flex; align-items:center; gap:.42rem; }
+            #mainNav .nav-section-icon { font-size:.88em; width:1.1em; text-align:center; opacity:.92; }
+            @media (max-width:991.98px) { #mainNav .nav-link { justify-content:flex-start; } }
             .project-placeholder { min-height: 250px; width: 100%; background: #f2f4f5; border: 2px dashed #c7cdd1; border-radius: .5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #6c757d; padding: 2rem; text-align: center; }
             .project-placeholder span { font-weight: 700; font-size: 1.05rem; }
             .project-placeholder small { margin-top: .4rem; }
@@ -156,17 +159,12 @@
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#research">RESEARCH</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#fieldwork">FIELDWORK</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#teaching">TEACHING</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#codes">CODES</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#coursework">COURSEWORK</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
-                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#research"><i class="fas fa-chart-bar nav-section-icon" aria-hidden="true"></i><span>RESEARCH</span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#fieldwork"><i class="fas fa-camera nav-section-icon" aria-hidden="true"></i><span>FIELDWORK</span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#teaching"><i class="fas fa-chalkboard-teacher nav-section-icon" aria-hidden="true"></i><span>TEACHING</span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#coursework"><i class="fas fa-book nav-section-icon" aria-hidden="true"></i><span>COURSEWORK</span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#codes"><i class="fas fa-code nav-section-icon" aria-hidden="true"></i><span>CODES</span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><i class="fas fa-user nav-section-icon" aria-hidden="true"></i><span>CONTACT</span></a></li>
                     </ul>
                 </div>
             </div>
